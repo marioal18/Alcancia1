@@ -38,7 +38,7 @@ namespace Parcial1
 
             do
             {
-                Console.WriteLine("\n 1. Insertar monedas \n 2. Total de monedas \n 3. Dinero total \n 4. cantidad de moneda por denominacion \n 5. Cantidad de dinero  por denominacion \n 6. Salir");
+                Console.WriteLine("\n 1. Insertar monedas \n 2. Total de monedas \n 3. Cantidad de moneda por denominacion \n 4. Cantidad de dinero  por denominacion \n 5. Dinero total \n 6. Salir");
 
                 menu = System.Convert.ToInt32(Console.ReadLine());
                 Console.Clear();
@@ -110,11 +110,6 @@ namespace Parcial1
                         break;
 
                     case 3:
-                        totalT = total1 + total2 + total3 + total4 + total5;
-                        Console.WriteLine($"Cantidad de dinero " + totalT);
-                        break;
-
-                    case 4:
                         Console.WriteLine($"Cantidad de monedas por denominacion de 50 es: " + listaMoneda1.Count + $" monedas.");
                         Console.WriteLine($"Cantidad de monedas por denominacion de 100 es: " + listaMoneda2.Count + $" monedas.");
                         Console.WriteLine($"Cantidad de monedas por denominacion de 200 es: " + listaMoneda3.Count + $" monedas.");
@@ -122,7 +117,7 @@ namespace Parcial1
                         Console.WriteLine($"Cantidad de monedas por denominacion de 1000 es: " + listaMoneda5.Count + $" monedas.");
                         break;
 
-                    case 5:
+                    case 4:
                         total1 = 50 * listaMoneda1.Count;
                         total2 = 100 * listaMoneda2.Count;
                         total3 = 200 * listaMoneda3.Count;
@@ -133,6 +128,12 @@ namespace Parcial1
                         Console.WriteLine($"Cantidad de dinero por denominacion de 200 es: " + total3);
                         Console.WriteLine($"Cantidad de dinero por denominacion de 500 es: " + total4);
                         Console.WriteLine($"Cantidad de dinero por denominacion de 1000 es: " + total5);
+                        break;
+
+                    case 5:
+                        totalT = total1 + total2 + total3 + total4 + total5;
+                        Console.WriteLine($"Cantidad de dinero " + totalT);
+
                         break;
 
                     case 6:
